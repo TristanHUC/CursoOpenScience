@@ -1,4 +1,3 @@
-# Required
 version: 2
 
 # Set the version of Python and other tools you might need
@@ -12,5 +11,10 @@ mkdocs:
 
 # Optionally declare the Python requirements required to build your docs
 python:
-  install:
-  - requirements: docs/requirements.txt
+  version: 3.9
+  setup_py_install: false  # Disable setup.py installation
+  extra_requirements:
+    - docs
+
+# Use Poetry for installing dependencies
+poetry: true
