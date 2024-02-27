@@ -2,14 +2,14 @@ from lxml import etree
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from utils import extract_text
+import sys
 
+input_name = sys.argv[1]
 
-
-tree = etree.parse('./output/exemple_pdf4.grobid.tei.xml')
+path_to_file = './output/'+input_name[:len(input_name)-4]+'.grobid.tei.xml'
+tree = etree.parse(path_to_file)
 
 root = tree.getroot()
-
-
 
 
 total_text = ''
@@ -17,7 +17,6 @@ for sections in root[2][0]:
     total_text += extract_text(sections)
     total_text += '\n'
 
-#print(total_text)
 
 dict = {}
 string = ""

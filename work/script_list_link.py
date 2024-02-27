@@ -1,9 +1,13 @@
 from lxml import etree
 from utils import extract_text, look_for_links
+import sys
+
+input_name = sys.argv[1]
 
 link_list = []
 
-tree = etree.parse('./output/exemple_pdf10.grobid.tei.xml')
+path_to_file = './output/'+input_name[:len(input_name)-4]+'.grobid.tei.xml'
+tree = etree.parse(path_to_file)
 
 root = tree.getroot()
 
