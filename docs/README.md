@@ -13,3 +13,6 @@ This repository is composed of 4 scripts :
 - run the script ... (script pour lancer docker et le container)
 - run the script_grobit_pdf.py 
 - you can now run any script you want
+
+
+[![DOI](https://zenodo.org/badge/753142842.svg)](https://zenodo.org/doi/10.5281/zenodo.10712488)
