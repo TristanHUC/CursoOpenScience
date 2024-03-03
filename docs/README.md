@@ -2,7 +2,7 @@
 # Composition
 This repository is composed of 4 scripts :
 - script_grobid_pdf you should run first to process your pdf which should be in dataset to TEI format so it can be process by other script.
-- script_wordcloud allows you to draw a wordcloud from the most represented words in your paper.
+- script_wordcloud allows you to draw a wordcloud from the most represented words in the abstract of your paper.
 - script_visualization allows you to draw a visualization of the number of figure in each papers of your dataset.
 - script_list_link allows you to print a list of all links present in your paper.
 

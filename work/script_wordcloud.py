@@ -12,15 +12,16 @@ tree = etree.parse(path_to_file)
 root = tree.getroot()
 
 
-total_text = ''
-for sections in root[2][0]:
-    total_text += extract_text(sections)
-    total_text += '\n'
+#if we want to compute the whole text
+abstract_text = ''
+for sections in root[0][2]:
+    abstract_text += extract_text(sections)
+    abstract_text += '\n'
 
 
 dict = {}
 string = ""
-for char in total_text:
+for char in abstract_text:
     if (not char.isspace() or char not in '.;,_ \n()\""'):
         string += char
     else:

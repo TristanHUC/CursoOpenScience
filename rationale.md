@@ -8,7 +8,7 @@ This python module contains two functions :
 
 
 # Wordcloud
-- Extract the text with extract_text function
+- Extract the text from the abstract with extract_text function
 - separate it in words when encountering one of these .;,_ \n()\"" or space
 - count each word occurrence in a dictionary 
 - create the wordcloud from the dictionary using WordCloud library
