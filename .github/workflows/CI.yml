@@ -21,6 +21,7 @@ jobs:
         curl -sSL https://install.python-poetry.org | python -
     - name: Install dependencies
       run: poetry install
+      working-directory: docs
     - name: Test with unittest
       run: |
         poetry run python -m unittest discover -s tests -p '*.py'
