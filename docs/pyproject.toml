@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "grobid"
+name = "curso_open_science"
 version = "0.1.0"
 description = ""
 authors = ["Tristan Hucher <tristan.hucher@etu.utc.fr>"]
