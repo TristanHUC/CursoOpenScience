@@ -22,9 +22,12 @@ jobs:
     - name: Install dependencies
       run: poetry install
       working-directory: docs
-    - name: Test with unittest
+    - name: Change python path
       run: |
         PYTHONPATH="/home/runner/work/CursoOpenScience/CursoOpenScience"
+      working-directory: docs
+    - name: Test with unittest
+      run: |
         poetry run python -m unittest discover -s ../tests -p '*.py'
         echo $PYTHONPATH
       working-directory: docs
