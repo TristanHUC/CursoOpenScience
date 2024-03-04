@@ -25,13 +25,7 @@ jobs:
     - name: Test with unittest
       run: |
 
-        # disable command workflow processing
-        echo "::stop-commands::`echo -n ${{ github.token }} | sha256sum | head -c 64`"
-
-        # log untrusted output
-        echo "untrusted output"
-        
-        echo "::set-env name=PYTHONPATH::/home/runner/work/CursoOpenScience/CursoOpenScience"
+        poetry run echo "export PYTHONPATH=/home/runner/work/CursoOpenScience/CursoOpenScience" >> $GITHUB_ENV
         echo $PYTHONPATH
         poetry run python -m unittest discover -s ../tests -p '*.py'
       working-directory: docs
