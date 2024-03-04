@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "curso_open_science"
+name = "CursoOpenScience"
 version = "0.1.0"
 description = ""
 authors = ["Tristan Hucher <tristan.hucher@etu.utc.fr>"]
