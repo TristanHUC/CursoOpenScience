@@ -16,12 +16,10 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
+    - name: Install Poetry
+      run: |
+        curl -sSL https://install.python-poetry.org | python -
     - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip setuptools wheel
-    - name: Build tests
-      run: |
-        pip install .[test]
+      run: poetry install
     - name: Test with pytest
-      run: |
-        pytest
+      run: poetry run pytest
