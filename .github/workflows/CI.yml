@@ -32,4 +32,4 @@ jobs:
         poetry show
     - name: Test with unittest
       run: |
-        python -m unittest discover -s tests -p '*.py'
+        poetry run python -m unittest discover -s tests -p '*.py'
