@@ -11,7 +11,7 @@ class TestIsPDF(unittest.TestCase):
         if relative_path[len(relative_path) - 5:] == 'tests':
             directory = '../work/dataset'
         else:
-            directory = './work/dataset'
+            directory = '../work/dataset'
         for filename in os.listdir(directory):
             self.assertTrue(is_pdf(filename), f"{filename} is not recognized as a PDF file")
 
