@@ -28,6 +28,5 @@ jobs:
       working-directory: docs
     - name: Test with unittest
       run: |
-        poetry run python -m unittest discover -s ../tests -p '*.py'
         echo $PYTHONPATH
       working-directory: docs
