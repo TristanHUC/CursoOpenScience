@@ -21,8 +21,8 @@ jobs:
         python -m pip install --upgrade pip setuptools wheel
     - name: Build tests
       run: |
+        cd docs
         pip install .[test]
-      working-directory: docs
     - name: Test with pytest
       run: |
         pytest
