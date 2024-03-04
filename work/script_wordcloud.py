@@ -12,7 +12,6 @@ tree = etree.parse(path_to_file)
 root = tree.getroot()
 
 
-#if we want to compute the whole text
 abstract_text = ''
 for sections in root[0][2]:
     abstract_text += extract_text(sections)
