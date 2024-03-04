@@ -7,6 +7,7 @@ class test_output(unittest.TestCase):
 
     def test_output(self):
 
+        print(os.getcwd())
         filename = 'exemple_pdf1.grobid.tei.xml'
         directory = "./input_files"
 
