@@ -22,13 +22,9 @@ jobs:
     - name: Install dependencies
       run: poetry install
       working-directory: docs
-    - name: Change python path
-      run: |
-        poetry run echo "export PYTHONPATH=/home/runner/work/CursoOpenScience/CursoOpenScience" >> $GITHUB_ENV
-      working-directory: docs
-    
     - name: Test with unittest
       run: |
+        echo "::set-env name=PYTHONPATH::/home/runner/work/CursoOpenScience/CursoOpenScience"
         poetry run python -m unittest discover -s ../tests -p '*.py'
       working-directory: docs
 
