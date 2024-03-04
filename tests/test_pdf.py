@@ -7,7 +7,7 @@ def is_pdf(filename):
 class TestIsPDF(unittest.TestCase):
 
     def test_pdf(self):
-
+        print(os.getcwd())
         relative_path = os.getcwd()
         if relative_path[len(relative_path) - 5:] == 'tests':
             directory = '../work/dataset'
