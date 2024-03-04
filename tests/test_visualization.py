@@ -1,7 +1,7 @@
 # test_visualization.py
 import unittest
 import os
-from ..work.utils import count_figure
+from CursoOpenScience.work.utils import count_figure
 
 class test_output(unittest.TestCase):
 
