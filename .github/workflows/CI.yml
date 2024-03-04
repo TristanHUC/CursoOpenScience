@@ -18,11 +18,11 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
+        cd docs
         python -m pip install --upgrade pip setuptools wheel
     - name: Build tests
       run: |
         cd docs
-        ls 
         pip install .[test]
     - name: Test with pytest
       run: |
