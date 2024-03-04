@@ -24,5 +24,7 @@ jobs:
       working-directory: docs
     - name: Test with unittest
       run: |
-        PYTHONPATH="/home/runner/work/CursoOpenScience/CursoOpenScience" poetry run python -m unittest discover -s ../tests -p '*.py'
+        PYTHONPATH="/home/runner/work/CursoOpenScience/CursoOpenScience"
+        poetry run python -m unittest discover -s ../tests -p '*.py'
+        echo $PYTHONPATH
       working-directory: docs
