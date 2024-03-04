@@ -22,6 +22,7 @@ jobs:
     - name: Build tests
       run: |
         cd docs
+        ls 
         pip install .[test]
     - name: Test with pytest
       run: |
