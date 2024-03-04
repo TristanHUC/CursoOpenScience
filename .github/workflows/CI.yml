@@ -24,7 +24,7 @@ jobs:
       working-directory: docs
     - name: Change python path
       run: |
-        echo "export PYTHONPATH=/home/runner/work/CursoOpenScience/CursoOpenScience" >> $GITHUB_ENV
+        poetry run echo "export PYTHONPATH=/home/runner/work/CursoOpenScience/CursoOpenScience" >> $GITHUB_ENV
       working-directory: docs
     
     - name: Test with unittest
