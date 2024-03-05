@@ -36,7 +36,7 @@ for char in abstract_text:
 wordcloud = WordCloud(width=800, height=400, background_color='white').generate_from_frequencies(dict)
 
 
-output_file = '../../volume/output/wordcloud.png'
+output_file = '../../volume/output/'+input_name[:len(input_name)-4]+'_wordcloud.png'
 wordcloud.to_file(output_file)
 
 

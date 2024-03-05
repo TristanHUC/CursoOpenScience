@@ -29,7 +29,7 @@ for char in total_text:
             l.append(string)
         string = ""
 
-output_file = "../../volume/output/list_link.txt"
+output_file = "../../volume/output/"+input_name[:len(input_name)-4]+"_list_link.txt"
 
 with open(output_file, "w") as f:
     for item in l:

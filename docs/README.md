@@ -12,8 +12,8 @@ This repository is composed of 4 scripts :
 # How to install 
 - clone the repository 
 - Install the grobit container, following their documentation : https://grobid.readthedocs.io/en/latest/Grobid-docker/
-1. pull the docker image of grobid :  docker pull lfoppiano/grobid:latest-develop
-2. run the docker image : docker run -p 8070:8070 lfoppiano/grobid:latest-develop
+1) pull the docker image of grobid :  docker pull lfoppiano/grobid:latest-develop
+2) run the docker image : docker run -p 8070:8070 lfoppiano/grobid:latest-develop
 
 
 # How to execute
