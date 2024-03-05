@@ -12,5 +12,5 @@ for filename in os.listdir(directory):
     reduced_filename = filename[10:15]
     data[reduced_filename] = count_figure(file_path)
 
-plt.bar(list(data.keys()), list(data.values()))
-plt.show()
+output_file = "../../volume/output/plot.png"
+plt.savefig(output_file)

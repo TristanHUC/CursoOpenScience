@@ -29,5 +29,9 @@ for char in total_text:
             l.append(string)
         string = ""
 
-print(l)
+output_file = "../../volume/output/list_link.txt"
+
+with open(output_file, "w") as f:
+    for item in l:
+        f.write(str(item) + "\n")
 

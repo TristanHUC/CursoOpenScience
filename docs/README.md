@@ -11,18 +11,20 @@ This repository is composed of 4 scripts :
 
 # How to install 
 - clone the repository 
-- do a poetry install
-- put your pdf in the dataset folder
-- run the script 
-- run the script_grobit_pdf.py 
-- you can now run any script you want
+- Install the grobit container, following their documentation : https://grobid.readthedocs.io/en/latest/Grobid-docker/
+1. pull the docker image of grobid :  docker pull lfoppiano/grobid:latest-develop
+2. run the docker image : docker run -p 8070:8070 lfoppiano/grobid:latest-develop
+
 
 # How to execute
-- Put your pdf in the dataset part
+- put your pdf in the host_volume/dataset folder
 - run the script_grobid_pdf
-- Now your files should have been processed, make sure they are by checking the output directory.
-- Then you can run any of the 3 scripts : script_wordcloud, script_list_link or script_visualization.
-- For script_wordcloud and script_list_link you have to run with the name of your pdf in parameter. For exemple : python.exe script_wordcloud exemple_pdf10.pdf
+- Now your files should have been processed, make sure they are by checking the grobid_output directory.
+- build the docker image :  docker build --no-cache -t test .
+- run the docker image : docker run -it -v C:\Users\trist\UTC\curso_de_Inteligienca_artificial_y_cienca_abierta\grobid\host_volume:/volume test
+- Then in the container, you can run any of the 3 scripts : script_wordcloud, script_list_link or script_visualization and the result we appear in the host_volume/output directory
+- For script_wordcloud and script_list_link you have to run with the name of your pdf in parameter. For example : poetry run python ../work/script_wordcloud.py exemple_pdf10.pdf
+- For the script_visualization : no argument needed just run : poetry run python ../work/script_visualization.py
 
   Author : Tristan Hucher
   Mail : tristan.hucher@gmail.com
