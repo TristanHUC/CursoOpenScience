@@ -17,5 +17,5 @@ WORKDIR /CursoOpenScience/docs
 
 RUN poetry install
 
-RUN poetry run python ../work/script_wordcloud.py exemple_pdf10.pdf
+
 
