@@ -1,12 +1,11 @@
 from lxml import etree
 from wordcloud import WordCloud
-import matplotlib.pyplot as plt
 from utils import extract_text
 import sys
 
 input_name = sys.argv[1]
 
-path_to_file = '../work/output/'+input_name[:len(input_name)-4]+'.grobid.tei.xml'
+path_to_file = '../host_volume/grobid_output/'+input_name[:len(input_name)-4]+'.grobid.tei.xml'
 tree = etree.parse(path_to_file)
 
 root = tree.getroot()
@@ -36,7 +35,7 @@ for char in abstract_text:
 wordcloud = WordCloud(width=800, height=400, background_color='white').generate_from_frequencies(dict)
 
 
-output_file = '/volume/wordcloud.png'
+output_file = '/volume/output/wordcloud.png'
 wordcloud.to_file(output_file)
 
 

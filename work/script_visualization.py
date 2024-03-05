@@ -2,7 +2,7 @@ from utils import count_figure
 import os
 from matplotlib import pyplot as plt
 
-directory = "./output"
+directory = "../host_volume/grobid_output"
 
 data = {}
 
