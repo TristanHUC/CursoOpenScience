@@ -1,5 +1,6 @@
 from lxml import etree
 from wordcloud import WordCloud
+import matplotlib.pyplot as plt
 from utils import extract_text
 import sys
 
@@ -35,7 +36,7 @@ for char in abstract_text:
 wordcloud = WordCloud(width=800, height=400, background_color='white').generate_from_frequencies(dict)
 
 
-output_file = '/volume/output/wordcloud.png'
+output_file = '../../volume/output/wordcloud.png'
 wordcloud.to_file(output_file)
 
 
