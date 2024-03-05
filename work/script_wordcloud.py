@@ -6,7 +6,7 @@ import sys
 
 input_name = sys.argv[1]
 
-path_to_file = './output/'+input_name[:len(input_name)-4]+'.grobid.tei.xml'
+path_to_file = '/CursoOpenScience/work/output/'+input_name[:len(input_name)-4]+'.grobid.tei.xml'
 tree = etree.parse(path_to_file)
 
 root = tree.getroot()
