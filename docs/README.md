@@ -13,7 +13,7 @@ This repository is composed of 4 scripts :
 - clone the repository 
 - do a poetry install
 - put your pdf in the dataset folder
-- run the script ... (script pour lancer docker et le container)
+- run the script 
 - run the script_grobit_pdf.py 
 - you can now run any script you want
 
@@ -22,9 +22,13 @@ This repository is composed of 4 scripts :
 - run the script_grobid_pdf
 - Now your files should have been processed, make sure they are by checking the output directory.
 - Then you can run any of the 3 scripts : script_wordcloud, script_list_link or script_visualization.
-- For script_wordcloud and script_list_link you have to run with the name of your pdf in parameter. For exemple script_wordcloud exemple_pdf10.pdf
+- For script_wordcloud and script_list_link you have to run with the name of your pdf in parameter. For exemple : python.exe script_wordcloud exemple_pdf10.pdf
 
   Author : Tristan Hucher
   Mail : tristan.hucher@gmail.com
+
+# Documentation
+
+See all documentation at https://curso-open-science-v2.readthedocs.io/en/latest/
 
 [![DOI](https://zenodo.org/badge/753142842.svg)](https://zenodo.org/doi/10.5281/zenodo.10712488)
