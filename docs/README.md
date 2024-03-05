@@ -22,7 +22,7 @@ This repository is composed of 4 scripts :
 - run the work/script_grobid_pdf.py without argument : python work/script_grobit_pdf.py
 - Now your files should have been processed, make sure they are by checking the grobid_output directory.
 - build the docker image :  docker build --no-cache -t test .
-- run the docker image but replace with the path to the host_volume directory : docker run -it -v path\host_volume:/volume test
+- run the docker image but replace with the absolute path to the host_volume directory : docker run -it -v path\host_volume:/volume test
 - Then in the container, you can run any of the 3 scripts : script_wordcloud, script_list_link or script_visualization and the result we appear in the host_volume/output directory
 - For script_wordcloud and script_list_link you have to run with the name of your pdf in parameter. For example : poetry run python ../work/script_wordcloud.py exemple_pdf10.pdf
 - For the script_visualization : no argument needed just run : poetry run python ../work/script_visualization.py
