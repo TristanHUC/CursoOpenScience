@@ -35,7 +35,8 @@ for char in abstract_text:
 # Generate the word cloud
 wordcloud = WordCloud(width=800, height=400, background_color='white').generate_from_frequencies(dict)
 
-plt.figure(figsize=(10, 5))
-plt.imshow(wordcloud, interpolation='bilinear')
-plt.show()
+
+output_file = '/volume/wordcloud.png'
+wordcloud.to_file(output_file)
+
 
